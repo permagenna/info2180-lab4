@@ -29,9 +29,9 @@ function allred(){
 
 function finish(){
 	if (result){
-		alert("You lose");
+		document.getElementById("status").textContent = "You Lose";
 	} else {
-		alert("You win");
+		document.getElementById("status").innerHTML = "You win";
 	}
 	
 }
@@ -42,6 +42,7 @@ function start (){
 	for (let i = 0; i < allBoundaries.length; i++) {		
 		allBoundaries[i].classList.remove("youlose");
 	}
+	//location.reload();
 }
 
 
