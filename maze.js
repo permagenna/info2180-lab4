@@ -1,18 +1,25 @@
 
 
 function setUpEvents(){
-	let bound = document.getElementById("boundary1");
-	bound.addEventListener("mouseover", function(){
-		bound.classList.add("youlose")
-	});
+	let allBoundaries = document.getElementsByClassName("boundary");
+	for (let i = 0; i < allBoundaries.length; i++) {
+		allBoundaries[i].addEventListener("mouseover", function(){
+			allred();
+		});
+	}
+}
+
+function allred(){
+	let allBoundaries = document.getElementsByClassName("boundary");
+	for (let i = 0; i < allBoundaries.length; i++) {		
+		allBoundaries[i].classList.add("youlose");
+	}
 }
 
 
 window.onload = function (){
 	setUpEvents();
 }
-
-
 
 
 
